@@ -1,0 +1,25 @@
+
+
+<div class='container'>
+	
+	<table class='table'>
+		   	<tr><th>Unique Number: <%= student.adminNo%> </th></tr>
+			<tr><th>Name of the Student: <%= student.name %></th></tr>
+			<tr><th>Standard: <%= student.standard%> </th></tr>
+			<tr><th>Section: <%= student.section%> </th></tr>
+			<tr><th>Phone Number: <%= student.mobileno%></th></tr>
+			<tr>
+
+			<td>Guardian 1:  <img src= "<%= student.image1 %>" height="100" width="100"</td>
+			<td>Guardian 2:  <img src= "<%= student.image2 %>" height="100" width="100"</td>
+			<td>Guardian 3:  <img src= "<%= student.image3 %>" height="100" width="100"</td>
+			<td>Guardian 4:  <img src= "<%= student.image4 %>" height="100" width="100"</td>
+
+			</tr>
+			
+	
+	</table>
+	<% if (session.authenticated && session.User.admin) { %>
+	<a class="btn btn-medium btn-success" href="/student/edit/<%= student.id %>">Edit</a>
+	<% } %> 
+</div>

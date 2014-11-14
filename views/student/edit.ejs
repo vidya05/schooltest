@@ -1,0 +1,24 @@
+
+
+<div class='container'>
+<form action="/student/update/<%= student.id %>" method="POST" class="form-signin">
+		<h2> Hey, you're editing a student data... </h2>
+
+			<div class = 'editcontainer'>
+
+			<tr><th>Name of the Student: <input value="<%= student.name %>" name="name" type="text" class="form-control"/></th></tr>
+			<tr><th>Standard: <input value="<%= student.standard %>" name="standard" type="text" class="form-control"/> </th></tr>
+			<tr><th>Section: <input value="<%= student.section %>" name="section" type="text" class="form-control"/> </th></tr>
+			<tr><th>Phone Number: <input value="<%= student.mobileno %>" name="mobileno" type="text" class="form-control"/></th></tr>
+			<tr>
+
+     <div class='btecont'>
+		<input type="submit" value="Proceed" class="btn btn-success "/>
+		<a class="btn btn-danger" href="/student/show/<%= student.id %>"> Cancel </a>
+		  </div>
+		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+		</div>
+	</form>
+
+	</div>

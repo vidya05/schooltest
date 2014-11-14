@@ -1,0 +1,172 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'waterline' ]
+2 info using npm@1.4.23
+3 info using node@v0.10.31
+4 verbose node symlink /usr/bin/node
+5 verbose readDependencies using package.json deps
+6 verbose cache add [ 'waterline', null ]
+7 verbose cache add name=undefined spec="waterline" args=["waterline",null]
+8 verbose parsed url { protocol: null,
+8 verbose parsed url   slashes: null,
+8 verbose parsed url   auth: null,
+8 verbose parsed url   host: null,
+8 verbose parsed url   port: null,
+8 verbose parsed url   hostname: null,
+8 verbose parsed url   hash: null,
+8 verbose parsed url   search: null,
+8 verbose parsed url   query: null,
+8 verbose parsed url   pathname: 'waterline',
+8 verbose parsed url   path: 'waterline',
+8 verbose parsed url   href: 'waterline' }
+9 silly lockFile 602a457e-waterline waterline
+10 verbose lock waterline /home/ash/.npm/602a457e-waterline.lock
+11 silly lockFile 602a457e-waterline waterline
+12 silly lockFile 602a457e-waterline waterline
+13 verbose addNamed [ 'waterline', '' ]
+14 verbose addNamed [ null, '*' ]
+15 silly lockFile 1c343330-waterline waterline@
+16 verbose lock waterline@ /home/ash/.npm/1c343330-waterline.lock
+17 silly addNameRange { name: 'waterline', range: '*', hasData: false }
+18 verbose request where is /waterline
+19 verbose request registry https://registry.npmjs.org/
+20 verbose request id e0b44c883a533bb8
+21 verbose url raw /waterline
+22 verbose url resolving [ 'https://registry.npmjs.org/', './waterline' ]
+23 verbose url resolved https://registry.npmjs.org/waterline
+24 verbose request where is https://registry.npmjs.org/waterline
+25 info trying registry request attempt 1 at 12:12:22
+26 verbose etag "4ZYWV1UHKGO08TZWRJX87KBCM"
+27 http GET https://registry.npmjs.org/waterline
+28 http 200 https://registry.npmjs.org/waterline
+29 silly registry.get cb [ 200,
+29 silly registry.get   { date: 'Fri, 31 Oct 2014 06:42:24 GMT',
+29 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+29 silly registry.get     etag: '"CZ62UMV25WNQXBC7B7UV2HG4J"',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=60',
+29 silly registry.get     'content-length': '121871',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '0',
+29 silly registry.get     'x-served-by': 'cache-lax1429-LAX',
+29 silly registry.get     'x-cache': 'HIT',
+29 silly registry.get     'x-cache-hits': '1',
+29 silly registry.get     'x-timer': 'S1414737744.236825,VS0,VE306',
+29 silly registry.get     vary: 'Accept',
+29 silly registry.get     'keep-alive': 'timeout=10, max=50',
+29 silly registry.get     connection: 'Keep-Alive' } ]
+30 silly addNameRange number 2 { name: 'waterline', range: '*', hasData: true }
+31 silly addNameRange versions [ 'waterline',
+31 silly addNameRange   [ '0.0.0',
+31 silly addNameRange     '0.0.1',
+31 silly addNameRange     '0.0.2',
+31 silly addNameRange     '0.0.4',
+31 silly addNameRange     '0.0.5',
+31 silly addNameRange     '0.0.51',
+31 silly addNameRange     '0.0.52',
+31 silly addNameRange     '0.0.5201',
+31 silly addNameRange     '0.0.5202',
+31 silly addNameRange     '0.0.5204',
+31 silly addNameRange     '0.0.5205',
+31 silly addNameRange     '0.0.6',
+31 silly addNameRange     '0.0.7',
+31 silly addNameRange     '0.1.0',
+31 silly addNameRange     '0.1.5',
+31 silly addNameRange     '0.1.5-1',
+31 silly addNameRange     '0.1.6-0',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.4.2',
+31 silly addNameRange     '0.4.4',
+31 silly addNameRange     '0.4.5',
+31 silly addNameRange     '0.4.6',
+31 silly addNameRange     '0.4.7',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.5.1',
+31 silly addNameRange     '0.5.2',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.6.1',
+31 silly addNameRange     '0.9.0',
+31 silly addNameRange     '0.9.1',
+31 silly addNameRange     '0.9.2',
+31 silly addNameRange     '0.9.3',
+31 silly addNameRange     '0.9.4',
+31 silly addNameRange     '0.9.5',
+31 silly addNameRange     '0.9.6',
+31 silly addNameRange     '0.9.7',
+31 silly addNameRange     '0.9.8',
+31 silly addNameRange     '0.9.9',
+31 silly addNameRange     '0.9.10',
+31 silly addNameRange     '0.9.11',
+31 silly addNameRange     '0.10.0-rc1',
+31 silly addNameRange     '0.10.0-rc2',
+31 silly addNameRange     '0.10.0-rc3',
+31 silly addNameRange     '0.9.12',
+31 silly addNameRange     '0.9.13',
+31 silly addNameRange     '0.10.0-rc4',
+31 silly addNameRange     '0.9.14',
+31 silly addNameRange     '0.10.0-rc5',
+31 silly addNameRange     '0.9.15',
+31 silly addNameRange     '0.10.0-rc6',
+31 silly addNameRange     '0.9.16',
+31 silly addNameRange     '0.10.0-rc7',
+31 silly addNameRange     '0.10.0-rc8',
+31 silly addNameRange     '0.10.0-rc9',
+31 silly addNameRange     '0.10.0-rc10',
+31 silly addNameRange     '0.10.0-rc11',
+31 silly addNameRange     '0.10.0-rc12',
+31 silly addNameRange     '0.10.0-rc13',
+31 silly addNameRange     '0.10.0-rc14',
+31 silly addNameRange     '0.10.0-rc15',
+31 silly addNameRange     '0.10.1',
+31 silly addNameRange     '0.10.2',
+31 silly addNameRange     '0.10.3',
+31 silly addNameRange     '0.10.4',
+31 silly addNameRange     '0.10.5',
+31 silly addNameRange     '0.10.6',
+31 silly addNameRange     '0.10.7',
+31 silly addNameRange     '0.10.8',
+31 silly addNameRange     '0.10.9',
+31 silly addNameRange     '0.10.10',
+31 silly addNameRange     '0.10.11',
+31 silly addNameRange     '0.10.12',
+31 silly addNameRange     '0.1.1',
+31 silly addNameRange     '0.1.3',
+31 silly addNameRange     '0.1.4' ] ]
+32 verbose addNamed [ 'waterline', '0.10.12' ]
+33 verbose addNamed [ '0.10.12', '0.10.12' ]
+34 silly lockFile 604dff90-waterline-0-10-12 waterline@0.10.12
+35 verbose lock waterline@0.10.12 /home/ash/.npm/604dff90-waterline-0-10-12.lock
+36 silly lockFile 0df6e97c--waterline-waterline-0-10-12-tgz https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz
+37 verbose lock https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz /home/ash/.npm/0df6e97c--waterline-waterline-0-10-12-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz',
+38 verbose addRemoteTarball   '280ff92a086dea60c7617b707c3bcd7d7e8e7223' ]
+39 info retry fetch attempt 1 at 12:12:25
+40 verbose fetch to= /tmp/npm-5591-5XSfqTx3/registry.npmjs.org/waterline/-/waterline-0.10.12.tgz
+41 http GET https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz
+42 http 200 https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz
+43 silly lockFile 0df6e97c--waterline-waterline-0-10-12-tgz https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz
+44 silly lockFile 0df6e97c--waterline-waterline-0-10-12-tgz https://registry.npmjs.org/waterline/-/waterline-0.10.12.tgz
+45 silly lockFile 604dff90-waterline-0-10-12 waterline@0.10.12
+46 silly lockFile 604dff90-waterline-0-10-12 waterline@0.10.12
+47 silly lockFile 1c343330-waterline waterline@
+48 silly lockFile 1c343330-waterline waterline@
+49 error Error: EACCES, mkdir '/home/ash/.npm/waterline/0.10.12'
+49 error  { [Error: EACCES, mkdir '/home/ash/.npm/waterline/0.10.12']
+49 error   errno: 3,
+49 error   code: 'EACCES',
+49 error   path: '/home/ash/.npm/waterline/0.10.12',
+49 error   parent: 'testSchool' }
+50 error Please try running this command again as root/Administrator.
+51 error System Linux 3.13.0-24-generic
+52 error command "/usr/bin/node" "/usr/bin/npm" "install" "waterline"
+53 error cwd /home/ash/Work/My new SPs/testSchool
+54 error node -v v0.10.31
+55 error npm -v 1.4.23
+56 error path /home/ash/.npm/waterline/0.10.12
+57 error code EACCES
+58 error errno 3
+59 error stack Error: EACCES, mkdir '/home/ash/.npm/waterline/0.10.12'
+60 verbose exit [ 3, true ]
