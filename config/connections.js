@@ -50,6 +50,16 @@ module.exports.connections = {
     schema:true
   },
 
+  herokumysql: {
+    adapter: 'sails-mysql',
+    host: 'ec2-54-83-196-7.compute-1.amazonaws.com',
+    user: 'cxxfezsqyurhpa',
+    port      : 5432,
+    password: 'zUfK3ofGJBzEiX-Fa__lyRFbHh',
+    database: 'dc4fpl3bmnbv3'
+  },
+
+
   /***************************************************************************
   *                                                                          *
   * MongoDB is the leading NoSQL database.                                   *
@@ -76,12 +86,16 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  somePostgresqlServer: {
+  herokuPostgresqlServer: {
     adapter: 'sails-postgresql',
-    host: 'YOUR_POSTGRES_SERVER_HOSTNAME_OR_IP_ADDRESS',
-    user: 'YOUR_POSTGRES_USER',
-    password: 'YOUR_POSTGRES_PASSWORD',
-    database: 'YOUR_POSTGRES_DB'
+    host: 'ec2-54-83-196-7.compute-1.amazonaws.com',
+    user: 'gzenqrsmpntuig',
+    password: 'VbNrF2FQYrInRjQaeTgkMOdISB', 
+    database: 'd85ih6o04652k1',
+    port      : 5432,
+    schema:true,
+    ssl : true,
+    url :'postgres://gzenqrsmpntuig:VbNrF2FQYrInRjQaeTgkMOdISB@ec2-54-197-238-8.compute-1.amazonaws.com:5432/d85ih6o04652k1'
   }
 
 
