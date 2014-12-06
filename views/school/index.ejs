@@ -6,14 +6,21 @@
  <!-- <div class="control-group">-->
   
   
+	<% if(session.flash && session.flash.err) { %>
+		<ul class="alert alert-success">
+	<% Object.keys(session.flash.err).forEach(function(error) { %>
+		<li><%- JSON.stringify(session.flash.err[error]) %></li>
+	<% }) %>
+	</ul>
+	<% } %>
 
    	 <div class="editcontainer">
 	<input type="text" class="form-control" placeholder="Admin number" name="adminno" id="adminno">
 	 <div class="btecont">
-	<input type="submit" class="btn btn-success"" value="Submit"/>
+	<input type="submit" class="btn btn-success" value="Submit"/>
 	</div>
 	</div>
 	</div>
 	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </form>
-
+ 

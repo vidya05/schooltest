@@ -6,7 +6,8 @@
 */
 
 module.exports = {
- connection: 'herokuPostgresqlServer',
+ //connection: 'herokuPostgresqlServer',
+ connection: 'mysql',
   attributes: {
 
   	username:{

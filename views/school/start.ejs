@@ -5,6 +5,14 @@
     <h2>Student Guardian Data</h2>-->
     
 
+	<% if(session.flash && session.flash.err) { %>
+		<ul class="alert alert-success">
+	<% Object.keys(session.flash .err).forEach(function(error) { %>
+		<li><%- JSON.stringify(session.flash.err[error]) %></li>
+	<% }) %>
+	</ul>
+	<% } %>
+
  </div>
 </div>
 

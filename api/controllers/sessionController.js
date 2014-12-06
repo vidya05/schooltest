@@ -10,6 +10,7 @@ module.exports = {
 
 	'new': function(req, res) {
 		res.view('school/start');
+		
 	},
 
 	create: function(req, res, next) {
@@ -31,7 +32,7 @@ module.exports = {
 			}
 
 			//res.view('/school/start');
-			res.redirect('/session/new');
+			res.redirect('/');
 			return;
 		}
 
@@ -51,14 +52,17 @@ module.exports = {
 				req.session.flash = {
 					err: noAccountError
 				}
-				res.view('school/start');
+				res.redirect('/');
+				return;
 			}
+			//console.log("user found", user);
 
 			if(req.param('password')== user.password){
 				req.session.authenticated = true;
 				req.session.User = user;
-
-				res.view('school/index')
+				
+				res.view('school/index');
+				return;
 
 			}
 
@@ -72,7 +76,8 @@ module.exports = {
 					req.session.flash = {
 						err: usernamePasswordMismatchError
 					}
-					res.view('school/start');
+					res.redirect('/');
+					return;
 				}
 			});
 		

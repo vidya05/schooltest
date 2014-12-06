@@ -17,7 +17,8 @@ module.exports.models = {
   * connections (see `config/connections.js`)                                *
   *                                                                          *
   ***************************************************************************/
-   connection: 'herokuPostgresqlServer',
+   //connection: 'herokuPostgresqlServer',
+   connection: 'mysql',
 
   /***************************************************************************
   *                                                                          *
@@ -27,6 +28,7 @@ module.exports.models = {
   * See http://sailsjs.org/#/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-   migrate: 'safe'
+   //migrate: 'safe'
+     migrate: 'alter'
 
 };

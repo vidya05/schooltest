@@ -87,7 +87,7 @@ sub {
   bottom: -.25em;
 }
 img {
-  border: 0;
+  border: 1;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -1394,7 +1394,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  color: rgb(192, 192, 199);
+  color: rgb(43, 43, 85);
   font-size: medium;
   font-style: inherit;
 }
@@ -2131,7 +2131,7 @@ th {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
+  border: 1px solid #423C3C;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {

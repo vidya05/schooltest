@@ -6,7 +6,8 @@
 */
 
 module.exports = {
- connection: 'herokuPostgresqlServer',
+// connection: 'herokuPostgresqlServer',
+connection: 'mysql',
 
   attributes: {
 
@@ -15,7 +16,7 @@ module.exports = {
   	  	required: true
   	  },
 
- 	name :{
+  	name :{
   	  	type: 'string',
   	  	required: true
   	  },
@@ -24,12 +25,19 @@ module.exports = {
   	  },
 
   	  standard : {
-  	  	type:'string'
+  	  	type:'integer'
   	  },
 
   	  mobileno : {
   	  	type :'string',
   	  },
+      
+       simage :{
+        type:'string'
+      },
+      simageurl :{
+         type:'string'
+      },
 
   	  image1 :{
   	  	type:'string'
@@ -42,7 +50,19 @@ module.exports = {
   	  },
   	   image4 :{
   	  	type:'string'
-  	  }
+  	  },
+       image1url :{
+        type:'string'
+      },
+       image2url :{
+        type:'string'
+      },
+       image3url :{
+        type:'string'
+      },
+       image4url :{
+        type:'string'
+      }
 
   }
 };

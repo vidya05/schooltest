@@ -29,10 +29,10 @@ module.exports.policies = {
     '*': "flash",
 
    student: {
-    'new': "sessionAuth",
-    show: "sessionAuth",
-    edit: "sessionAuth",
-    update: "sessionAuth"
+    'new': ["flash" ,"sessionAuth"],
+    'show': "sessionAuth",
+    'edit': "sessionAuth",
+    'update': "sessionAuth"
   }
 
   /***************************************************************************

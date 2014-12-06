@@ -1,25 +1,119 @@
 
-
 <div class='container'>
 	
 	<table class='table'>
-		   	<tr><th>Unique Number: <%= student.adminNo%> </th></tr>
+		   	<tr><th>Unique Number: <%= student.adminNo%> </th>
+		   <td> <img src= "<%= student.simageurl %>" height="100" width="100" border="1"</td>
+		   	</tr>
 			<tr><th>Name of the Student: <%= student.name %></th></tr>
 			<tr><th>Standard: <%= student.standard%> </th></tr>
 			<tr><th>Section: <%= student.section%> </th></tr>
 			<tr><th>Phone Number: <%= student.mobileno%></th></tr>
 			<tr>
 
-			<td>Guardian 1:  <img src= "<%= student.image1 %>" height="100" width="100"</td>
-			<td>Guardian 2:  <img src= "<%= student.image2 %>" height="100" width="100"</td>
-			<td>Guardian 3:  <img src= "<%= student.image3 %>" height="100" width="100"</td>
-			<td>Guardian 4:  <img src= "<%= student.image4 %>" height="100" width="100"</td>
+			<td>Guardian 1:  <img src= "<%= student.image1url %>" height="100" width="100" border="1"</td>
+			<td>Guardian 2:  <img src= "<%= student.image2url %>" height="100" width="100" border="1"</td>
+			<td>Guardian 3:  <img src= "<%= student.image3url %>" height="100" width="100" border="1"</td>
+			<td>Guardian 4:  <img src= "<%= student.image4url %>" height="100" width="100" border="1"</td>
+			<!--<td>Guardian 4:  <img src= "<%= student.image2 %>" height="100" width="100"</td>-->
 
-			</tr>
-			
 	
 	</table>
 	<% if (session.authenticated && session.User.admin) { %>
 	<a class="btn btn-medium btn-success" href="/student/edit/<%= student.id %>">Edit</a>
 	<% } %> 
+
+</div>
+
+
+ 
+
+<div class = "container">
+
+<table class='table table-bordered table-stripped table-hover table-condensed '>
+<tr>
+<th>Test Name</th>
+<th>Telugu</th>
+<th>Telugu-Rank</th>
+<th>Hindi</th>
+<th>Hindi-Rank</th>
+<th>English</th>
+<th>English-Rank</th>
+<th>Maths</th>
+<th>Maths-Rank</th>
+<% if ((session.Stud.standard == 10) || ((session.Stud.standard >= 6) && (session.Stud.section === "iit") )) { %>
+	<th>Physics</th>
+	<th>physics-Rank</th>
+	<th>Chemistry</th>
+	<th>Chemistry-Rank</th>
+	<th>Biology</th>
+	<th>Biology-Rank</th>
+           
+ <% } else {  if(session.Stud.standard >=8 )  { %>
+	<th>Physics</th>
+	<th>physics-Rank</th>
+	<th>Biology</th>
+	<th>Biology-Rank</th>
+   <% } else { %>
+	<th>Sceince</th>
+	<th>Sceince-Rank</th>
+<% } } %>
+
+<th>Social</th>
+<th>Social-Rank</th>
+<th>Total</th>
+<th>Academic Percentage</th>
+<th>Attendance Percentage</th>
+<th>Rank</th>
+<th>Grade</th>
+<th>Comments</th>
+</tr>
+
+
+
+<% _.each(marks, function(mark) { %>
+		<tr>
+			<td><%= mark.testname %></td>
+   			<td><%= mark.telugu %></td>
+   			<td><%= mark.telugurank %></td>
+   			<td><%= mark.hindi %></td>
+   			<td><%= mark.hindirank %></td>
+   			<td><%= mark.english %></td>
+   			<td><%= mark.englishrank %></td>
+  			<td><%= mark.maths %></td>
+   			<td><%= mark.mathsrank %></td>
+   			<% if ((session.Stud.standard == 10) || ((session.Stud.standard >= 6) && (session.Stud.section === "iit") )) { %>
+				<th><%= mark.physics %></th>
+				<th><%= mark.physicsrank %></th>
+				<th><%= mark.chemistry %></th>
+				<th><%= mark.chemrank %></th>
+				<th><%= mark.biology %></th>
+				<th><%= mark.biologyrank %></th>
+           
+          <% } else {  if(session.Stud.standard >=8 )  { %>
+         	 	<th><%= mark.physics %></th>
+				<th><%= mark.physicsrank %></th>
+				<th> <%=mark.biology %></th>
+				<th><%= mark.biologyrank %></th>
+
+          <% } else { %>
+				<th><%= mark.sceince %></th>
+				<th><%= mark.sceincerank %></th>
+          <% } } %>
+   			<td><%= mark.social %></td>
+   			<td><%= mark.socialrank %></td>
+   			<td><%= mark.acapercentage %></td>
+   			<td><%= mark.attpercentage %></td>
+   			<td><%= mark.rank %></td>
+   			<td><%= mark.grade %></td>
+   			<td><%= mark.comments %></td>
+
+		</tr> 
+
+		<% }) %>
+
+
+
+</table>
+
 </div>

@@ -19,6 +19,21 @@
 		<input type="hidden" name="_csrf" value="<%= _csrf %>" />
 
 		</div>
+		<!--<a class="btn btn-success" href="/student/uploadimage"> Cancel </a> -->
+
+		</div>
 	</form>
+
+
+
+
+	<div class = 'editcontainer'>
+		<form enctype='multipart/form-data' method='POST' action='/student/uploadimage/'> 
+            <!--<input id="photo_image" name="img" type="file" /> -->
+            <input type="file" name="avatar" multiple="multiple">
+           <input type="submit" value="upload" class="btn btn-success "/>
+        <!--	<input type="hidden" name="_csrf" value="<%= _csrf %>" /> -->
+	
+		</form>
 
 	</div>

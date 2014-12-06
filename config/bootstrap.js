@@ -10,7 +10,8 @@
  */
 
 module.exports.bootstrap = function(cb) {
-
+process.env.CLOUDINARY_URL= "cloudinary://995163783157855:i7Qdau3608F1oIPh-PzKiaPRdi4@dpeir6dr3";
+ 
   // It's very important to trigger this callback method when you are finished
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();
