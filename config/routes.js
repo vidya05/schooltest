@@ -34,6 +34,7 @@ module.exports.routes = {
 
   '/': {
    // view: 'homepage'
+    //controller: "SessionController", action: "new"
    view: 'school/start'
   }
 

@@ -989,6 +989,24 @@ hr {
   overflow: visible;
   clip: auto;
 }
+
+.myheaderh1{
+  font-family: serif;
+  font-weight: bolder;
+  font-size: xx-large;
+  line-height: 1.1;
+  color: rgb(76, 76, 138);;
+}
+
+.myheaderh2{
+  font-family: serif;
+  font-weight: bolder;
+  font-size: -webkit-xxx-large;
+  line-height: 1.1;
+  color: rgb(76, 76, 138);;
+}
+
+
 h1,
 h2,
 h3,
@@ -1397,6 +1415,21 @@ pre code {
   color: rgb(43, 43, 85);
   font-size: medium;
   font-style: inherit;
+}
+
+.centercontainer {
+  margin-top : -88px;
+  margin-left: 31%;
+  color: rgb(43, 43, 85);
+  font-size: medium;
+  font-style: inherit;
+  
+}
+.commontext{
+  background-color: rgb(35, 35, 68);
+  border-radius: 15px;
+  border-style: ridge;
+  
 }
 .editcontainer{
   padding-right: 15px;

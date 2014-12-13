@@ -47,31 +47,54 @@ module.exports = {
       if (err) return next(err);
       if (!student) return next();
       var cloudinary = require('cloudinary');
+      var urlUp = 1;
    // console.log(cloudinary.url('sample.jpg'));
    if(!student.simageurl){
+    urlUp = 0;
     student.simageurl = cloudinary.url(student.simage);
-    console.log(cloudinary.url(student.simage));
+    //console.log(cloudinary.url(student.simage));
    }
    if(!student.image1url){
+    urlUp = 0;
     student.image1url = cloudinary.url(student.image1);
+    //console.log(cloudinary.url(student.simage));
+
    }
    if(!student.image2url){
+    urlUp = 0;
     student.image2url = cloudinary.url(student.image2);
    }
    if(!student.image3url){
+    urlUp = 0;
     student.image3url = cloudinary.url(student.image3);
    }
    if(!student.image4url){
-    student.image4url = cloudinary.url(student.image4);
+    urlUp = 0;
+    student.image4url = cloudinary.url(student.image2);
    }
+
+if(urlUp==0){
+
+  console.log("updating");
+   var studObj = {
+        simageurl: student.simageurl,
+        image1url: student.image1url,
+        image2url: student.image2url,
+        image3url: student.image3url,
+        image4url: student.image4url,
+      }
+
+    Student.update(req.param('id'), studObj, function studentUpdated(err) {
+      if(err) return next(err);
+    });
+  }
+  
    //student.image2 = cloudinary.url('sample.jpg');
     //student.image2 = cloudinary.url(student.image2);
+   // student.update();
     Marks.findByAdminNo((student.adminNo), function foundMark(err, mark){
       if(err) return next(err);
       if (!mark) return next('marks doesn\'t exist.');
-
-      debugger;
-      console.log(JSON.stringify(mark,null,2));
      res.view({
         student: student,
         marks: mark
